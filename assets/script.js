@@ -51,7 +51,8 @@ arrowRight.addEventListener("click", () => {
     i++;
   }
   for (let i = 0; i < slides.length; i++) {
-    dot.className = "dot dot_selected";
+    dots[i].className = "dot dot_selected";
+    dots[i - 1].className = "dot";
   }
   slide.src = "./assets/images/slideshow/" + slides[i].image; // la source de l'image change à chaque click
   p.innerHTML = "<p>" + slides[i].tagLine + "</p>"; // Le texte accompagnant l'image change en suivant l'index i de l'image
